@@ -1,0 +1,8 @@
+{
+  "name": "recast",
+  "version": "1.0.0",
+  "description": "dynamic api-based cms",
+  "keywords": ["hapi", "cms", "backend"],
+  "author": "Nico Hämäläinen <nico@sizeof.io>",
+  "license": "MIT"
+}
