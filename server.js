@@ -1,5 +1,3 @@
-'use strict';
-
 // Dependencies
 const Hapi = require('hapi');
 
@@ -7,16 +5,14 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 server.connection({
   host: 'localhost',
-  port: 8000
+  port: 8000,
 });
 
 // Add routes
 server.route({
   method: 'GET',
   path: '/ping',
-  handler: function(request, reply) {
-    return reply('pong');
-  }
+  handler: (request, reply) => reply('pong'),
 });
 
 // Start server
