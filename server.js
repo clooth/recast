@@ -1,5 +1,6 @@
 // Dependencies
 const Hapi = require('hapi');
+const Good = require('good');
 
 // Create server
 const server = new Hapi.Server();
@@ -15,9 +16,23 @@ server.route({
   handler: (request, reply) => reply('pong'),
 });
 
+// Configure logging
+server.register({
+  register: Good,
+  options: {
+    reporters: [{
+      reporter: require('good-console'),
+      events: {
+        response: '*',
+        log: '*',
+      },
+    }],
+  },
+});
+
 // Start server
 server.start((err) => {
   if (err) throw err;
 
-  console.log('recast running at:', server.info.uri);
+  server.log('info', `recast running at ${server.info.uri}`);
 });
