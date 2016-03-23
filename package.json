@@ -2,6 +2,7 @@
   "name": "recast",
   "version": "1.0.0",
   "description": "dynamic api-based cms",
+  "repository": "clooth/recast",
   "keywords": [
     "hapi",
     "cms",
@@ -16,6 +17,8 @@
   },
   "devDependencies": {
     "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.2.0"
+    "eslint-config-airbnb": "^6.2.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6"
   }
 }
