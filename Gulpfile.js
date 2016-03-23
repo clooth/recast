@@ -4,5 +4,5 @@ const nodemon = require('gulp-nodemon');
 
 // Default task
 gulp.task('default', () =>
-  nodemon({ script: './server.js', ext: 'js' })
+  nodemon({ script: './server', ext: 'js' })
 );
